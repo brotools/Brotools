@@ -3,50 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Love Calculator ❤</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Love Calculator – BroTools</title>
+  <style>
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .love-box {
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #111;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #e3000f80;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1rem;
+      width: 80%;
+      border-radius: 10px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #e3000f;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      box-shadow: 0 0 10px #e3000f;
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #03dac6;
+      min-height: 80px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>💘 Love Calculator</h1>
-    <p>Enter your names to see your love compatibility!</p>
-  </header>
 
-  <main>
-    <section class="tool">
-      <input type="text" id="name1" placeholder="Your Name" />
-      <input type="text" id="name2" placeholder="Partner's Name" />
-      <button onclick="calculateLove()">Calculate Love 💖</button>
-      <p id="result"></p>
-    </section>
-    <a href="index.html" style="display: block; text-align: center; margin-top: 20px; color: #03dac6;">⬅ Back to Home</a>
-  </main>
+  <div class="love-box">
+    <h1>Love Calculator</h1>
+    <input type="text" id="name1" placeholder="Your Name" /><br/>
+    <input type="text" id="name2" placeholder="Crush's Name" /><br/>
+    <button onclick="calculateLove()">Calculate</button>
 
-  <footer>
-    <p>Made with ❤ by BroTools</p>
-  </footer>
+    <div class="result" id="loveResult">❤</div>
+
+    <a href="index.html" style="color: #777; display: block; margin-top: 20px;">⬅ Back to Home</a>
+  </div>
 
   <script>
     function calculateLove() {
       const name1 = document.getElementById("name1").value.trim();
       const name2 = document.getElementById("name2").value.trim();
-      const result = document.getElementById("result");
 
       if (!name1 || !name2) {
-        result.textContent = "Please enter both names!";
+        document.getElementById("loveResult").textContent = "❗ Enter both names!";
         return;
       }
 
-      const lovePercent = Math.floor(Math.random() * 51) + 50; // 50% to 100%
+      const lovePercent = Math.floor(Math.random() * 51) + 50;
       let message = "";
 
-      if (lovePercent > 90) message = "🔥 Soulmates for life!";
-      else if (lovePercent > 75) message = "💖 A beautiful bond!";
-      else if (lovePercent > 60) message = "😊 Worth a try!";
-      else message = "🤔 Just friends maybe?";
+      if (lovePercent > 90) {
+        message = "Made for each other!";
+      } else if (lovePercent > 75) {
+        message = "Cute match. Sparks are flying!";
+      } else if (lovePercent > 60) {
+        message = "There's something special here!";
+      } else {
+        message = "Give it a try... Love might surprise you!";
+      }
 
-      result.innerHTML = <strong>${name1}</strong> ❤ <strong>${name2}</strong> = <strong>${lovePercent}%</strong><br>${message};
+      document.getElementById("loveResult").innerHTML =
+        "❤ Love Score: <strong>" + lovePercent + "%</strong><br/>" + message;
     }
   </script>
+
 </body>
 </html>

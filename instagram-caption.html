@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Caption Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    .tool-container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #e3000f55;
+      text-align: center;
+    }
+
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      margin: 10px;
+    }
+
+    button {
+      background-color: #e3000f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      box-shadow: 0 0 10px #e3000f;
+    }
+
+    .caption-output {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      color: #03dac6;
+      min-height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tool-container">
+    <h1>📸 Instagram Caption Generator</h1>
+    <p>Select a category and get cool captions instantly!</p>
+
+    <select id="category">
+      <option value="attitude">Attitude</option>
+      <option value="love">Love</option>
+      <option value="funny">Funny</option>
+      <option value="sad">Sad</option>
+      <option value="motivational">Motivational</option>
+      <option value="aesthetic">Aesthetic</option>
+    </select>
+    
+    <br/>
+    <button onclick="generateCaption()">Generate Caption</button>
+
+    <div class="caption-output" id="captionOutput">✨</div>
+    <a href="index.html" style="color: #666; display: block; margin-top: 20px;">⬅ Back to Home</a>
+  </div>
+
+  <script>
+    const captions = {
+      attitude: [
+        "I’m not special, I’m just limited edition.",
+        "My attitude is based on how you treat me.",
+        "Born to express, not to impress.",
+        "Confidence level: Selfie with no filter.",
+        "Silent people have the loudest minds."
+      ],
+      love: [
+        "You are my today and all of my tomorrows. 💕",
+        "With you, every moment is sweet. ❤",
+        "Love is not what you say. Love is what you do.",
+        "Forever is a long time, but I wouldn’t mind spending it with you.",
+        "You stole my heart, but I’ll let you keep it."
+      ],
+      funny: [
+        "I followed a diet, but it didn’t follow me back.",
+        "My bed and I love each other, only the alarm clock is in between.",
+        "I’m not lazy, I’m on energy-saving mode.",
+        "Born to stand out with zero effort.",
+        "When nothing goes right, go left."
+      ],
+      sad: [
+        "Tears come from the heart, not from the brain.",
+        "I hide all my scars with a smile.",
+        "It hurts, but it’s okay. I’ll survive.",
+        "I’m tired of getting hurt again and again.",
+        "Some things break your heart but fix your vision."
+      ],
+      motivational: [
+        "Push yourself, because no one else is going to do it for you.",
+        "Your only limit is your mind.",
+        "Success doesn’t come to you — you go to it.",
+        "Wake up with determination. Go to bed with satisfaction.",
+        "Great things never come from comfort zones."
+      ],
+      aesthetic: [
+        "Dream. Create. Inspire.",
+        "Golden hour hits different.",
+        "Less perfection, more authenticity.",
+        "Chasing moonlight and memories.",
+        "Lost in the right direction."
+      ]
+    };
+
+    function generateCaption() {
+      const category = document.getElementById("category").value;
+      const list = captions[category];
+      const random = Math.floor(Math.random() * list.length);
+      document.getElementById("captionOutput").textContent = list[random];
+    }
+  </script>
+
+</body>
+</html>
