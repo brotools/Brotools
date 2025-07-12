@@ -3,58 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Toolbox</title>
+  <title>BroTools – Unleash the Machine</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+      border-bottom: 2px solid red;
+      box-shadow: 0 0 20px red;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #e3000f;
+      text-shadow: 0 0 10px #e3000f;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #888;
+    }
+
+    .intro {
+      text-align: center;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .tool-card {
+      background: #111;
+      border: 2px solid #222;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #e3000f30;
+    }
+
+    .tool-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #e3000f80;
+      border-color: #e3000f;
+    }
+
+    .tool-card h2 {
+      margin-bottom: 10px;
+      color: #e3000f;
+    }
+
+    .tool-card a button {
+      padding: 12px 24px;
+      background: transparent;
+      border: 2px solid #e3000f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .tool-card a button:hover {
+      background: #e3000f;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #444;
+      border-top: 1px solid #222;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>🛠 My Tool & Game Site</h1>
-    <p>Cool tools, fun apps, and smart features – all in one place!</p>
+    <h1>🚀 BroTools</h1>
+    <p>Unleash the Machine – Tools That Hit Hard.</p>
   </header>
 
-  <main>
-    <section class="tool">
+  <div class="intro">
+    <h2 style="color:#03dac6;">⚡ Choose Your Tool</h2>
+    <p>Fast. Functional. Fierce. Like a Ferrari for your browser.</p>
+  </div>
+
+  <div class="tool-grid">
+    <div class="tool-card">
       <h2>📱 Instagram Caption Generator</h2>
-      <button onclick="generateCaption()">Get a Caption</button>
-      <p id="captionOutput"></p>
-    </section>
-<section class="tool">
-  <h2>💘 Love Calculator</h2>
-  <a href="love-calculator.html">
-    <button>Try It Now</button>
-  </a>
-</section>
+      <a href="index.html"><button>Launch</button></a>
+    </div>
 
-<section class="tool">
-  <h2>💬 WhatsApp Bio Generator</h2>
-  <a href="whatsapp-bio.html">
-    <button>Generate Bio</button>
-  </a>
-</section>
+    <div class="tool-card">
+      <h2>💘 Love Calculator</h2>
+      <a href="love-calculator.html"><button>Launch</button></a>
+    </div>
 
-<section class="tool">
-  <h2>🔠 Name Generator</h2>
-  <a href="name-generator.html">
-    <button>Generate Name</button>
-  </a>
-</section>
-<footer>
-  <p>Made with ❤ by Me</p>
-</footer>
+    <div class="tool-card">
+      <h2>💬 WhatsApp Bio Generator</h2>
+      <a href="whatsapp-bio.html"><button>Launch</button></a>
+    </div>
 
-  <script>
-    const captions = [
-      "Dream big. Post bigger.",
-      "Mood: Unbothered. Forever.",
-      "Simplicity is the key to happiness.",
-      "Hustle in silence, let success make noise.",
-      "Catching flights, not feelings."
-    ];
+    <div class="tool-card">
+      <h2>🔠 Name Generator</h2>
+      <a href="name-generator.html"><button>Launch</button></a>
+    </div>
 
-    function generateCaption() {
-      const random = Math.floor(Math.random() * captions.length);
-      document.getElementById("captionOutput").textContent = captions[random];
-    }
-  </script>
+    <!-- More tools to be added here -->
+  </div>
+
+  <footer>
+    <p>© 2025 BroTools – Built for Speed. Styled for Power.</p>
+  </footer>
 </body>
 </html>
