@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Calculator ❤</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>💘 Love Calculator</h1>
+    <p>Enter your names to see your love compatibility!</p>
+  </header>
+
+  <main>
+    <section class="tool">
+      <input type="text" id="name1" placeholder="Your Name" />
+      <input type="text" id="name2" placeholder="Partner's Name" />
+      <button onclick="calculateLove()">Calculate Love 💖</button>
+      <p id="result"></p>
+    </section>
+    <a href="index.html" style="display: block; text-align: center; margin-top: 20px; color: #03dac6;">⬅ Back to Home</a>
+  </main>
+
+  <footer>
+    <p>Made with ❤ by BroTools</p>
+  </footer>
+
+  <script>
+    function calculateLove() {
+      const name1 = document.getElementById("name1").value.trim();
+      const name2 = document.getElementById("name2").value.trim();
+      const result = document.getElementById("result");
+
+      if (!name1 || !name2) {
+        result.textContent = "Please enter both names!";
+        return;
+      }
+
+      const lovePercent = Math.floor(Math.random() * 51) + 50; // 50% to 100%
+      let message = "";
+
+      if (lovePercent > 90) message = "🔥 Soulmates for life!";
+      else if (lovePercent > 75) message = "💖 A beautiful bond!";
+      else if (lovePercent > 60) message = "😊 Worth a try!";
+      else message = "🤔 Just friends maybe?";
+
+      result.innerHTML = <strong>${name1}</strong> ❤ <strong>${name2}</strong> = <strong>${lovePercent}%</strong><br>${message};
+    }
+  </script>
+</body>
+</html>

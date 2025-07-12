@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Name Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔠 Random Name Generator</h1>
+    <p>Click to get a cool or fun name suggestion!</p>
+  </header>
+
+  <main>
+    <section class="tool">
+      <button onclick="generateName()">Generate Name</button>
+      <p id="nameOutput" style="margin-top: 15px; font-weight: bold;"></p>
+    </section>
+    <a href="index.html" style="display: block; text-align: center; margin-top: 20px; color: #03dac6;">⬅ Back to Home</a>
+  </main>
+
+  <footer>
+    <p>Made with ❤ by BroTools</p>
+  </footer>
+
+  <script>
+    const names = [
+      "ShadowStorm",
+      "InstaBoss_23",
+      "CryptoNinja",
+      "LegendaryDude",
+      "CoolCatX",
+      "DarkHunter",
+      "PixelQueen",
+      "VibeMachine",
+      "BroCode123",
+      "MrMystery"
+    ];
+
+    function generateName() {
+      const random = Math.floor(Math.random() * names.length);
+      document.getElementById("nameOutput").textContent = names[random];
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Bio Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>💬 WhatsApp Bio Generator</h1>
+    <p>Click the button to get a unique, cool bio!</p>
+  </header>
+
+  <main>
+    <section class="tool">
+      <button onclick="generateBio()">Generate Bio</button>
+      <p id="bioOutput" style="margin-top: 15px; font-weight: bold;"></p>
+    </section>
+    <a href="index.html" style="display: block; text-align: center; margin-top: 20px; color: #03dac6;">⬅ Back to Home</a>
+  </main>
+
+  <footer>
+    <p>Made with ❤ by BroTools</p>
+  </footer>
+
+  <script>
+    const bios = [
+      "Live life, no regrets ✌",
+      "Coding my way through life 💻",
+      "Too busy to care 👀",
+      "Dream big, sleep late 😴",
+      "Status loading... 🔃",
+      "Built different 🔥",
+      "Success is my vibe 🏆",
+      "Low battery, high dreams ⚡",
+      "Dark mode is my happy place 🌙",
+      "Doing nothing is something 🌀"
+    ];
+
+    function generateBio() {
+      const random = Math.floor(Math.random() * bios.length);
+      document.getElementById("bioOutput").textContent = bios[random];
+    }
+  </script>
+</body>
+</html>
