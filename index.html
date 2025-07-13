@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="WmNwZXSzl-NstGFAmuC2KvsOFJPh5BfWi492Mom8DoU" />
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V4RN6P4K7"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3V4RN6P4K7'); </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BroTools – Fun Tools Hub</title>
+  <title>BroTools 🚀 Fun Tools Hub</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle, #0a0a0a 0%, #000000 100%);
-      color: white;
       font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle, #0a0a0a 0%, #000000 100%);
+      color: #ffffff;
     }
 
     header {
       text-align: center;
       padding: 40px 20px 20px;
+      background: #0d0d0d;
+      border-bottom: 1px solid #222;
     }
 
     header h1 {
       font-size: 3rem;
       color: #e3000f;
       text-shadow: 0 0 15px #ff0000aa;
+      margin: 0;
     }
 
     .container {
@@ -38,107 +41,94 @@
     .tool-card {
       background: #111;
       border-radius: 20px;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
-      box-shadow: 0 0 15px #e3000f33;
-      transition: 0.3s ease;
-      cursor: pointer;
-      border: 1px solid #333;
+      box-shadow: 0 0 15px #222;
+      transition: 0.3s;
     }
 
     .tool-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px #e3000f88;
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #e3000f88;
     }
 
     .tool-card h2 {
-      margin: 10px 0;
-      font-size: 1.3rem;
-      color: #fff;
+      margin-bottom: 20px;
+      color: #03dac6;
     }
 
-    .tool-card p {
-      font-size: 0.95rem;
-      color: #aaa;
+    .tool-card a button {
+      padding: 10px 20px;
+      background-color: #e3000f;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tool-card a button:hover {
+      box-shadow: 0 0 10px #e3000f;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 20px;
+      background: #0d0d0d;
       font-size: 0.9rem;
-      color: #666;
+      color: #777;
     }
 
-    a {
+    footer a {
+      color: #03dac6;
       text-decoration: none;
-      color: inherit;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>🚀 BroTools</h1>
-    <p>Your ultimate tools hub — fast, fun, premium.</p>
+    <h1>BroTools 🚀</h1>
+    <p>Powerful Fun Tools for Everyday Users</p>
   </header>
 
   <div class="container">
+    <div class="tool-card">
+      <h2>💘 Love Calculator</h2>
+      <a href="love-calculator.html"><button>Try It Now</button></a>
+    </div>
 
-    <a href="lovecalculator.html">
-      <div class="tool-card">
-        <h2>💘 Love Calculator</h2>
-        <p>Check your love percentage with someone special!</p>
-      </div>
-    </a>
+    <div class="tool-card">
+      <h2>📛 WhatsApp Bio Generator</h2>
+      <a href="whatsapp-bio.html"><button>Generate Bio</button></a>
+    </div>
 
-    <a href="caption.html">
-      <div class="tool-card">
-        <h2>📸 Insta Caption Generator</h2>
-        <p>Get bold, funny or savage captions in one click.</p>
-      </div>
-    </a>
+    <div class="tool-card">
+      <h2>🧠 Name Generator</h2>
+      <a href="name-generator.html"><button>Try It</button></a>
+    </div>
 
-    <a href="bio.html">
-      <div class="tool-card">
-        <h2>📱 WhatsApp Bio Generator</h2>
-        <p>Find unique bios to stand out on WhatsApp.</p>
-      </div>
-    </a>
+    <div class="tool-card">
+      <h2>🎮 Game Coming Soon</h2>
+      <button disabled>Stay Tuned</button>
+    </div>
 
-    <a href="namegen.html">
-      <div class="tool-card">
-        <h2>🧠 Name Generator</h2>
-        <p>Create cool usernames, nicknames or fantasy names.</p>
-      </div>
-    </a>
+    <div class="tool-card">
+      <h2>📸 Instagram Caption Generator</h2>
+      <a href="instagram-caption.html"><button>Get Captions</button></a>
+    </div>
 
-    <a href="#">
-      <div class="tool-card">
-        <h2>📝 Quote of the Day</h2>
-        <p>Get inspired with a new quote each day.</p>
-      </div>
-    </a>
-
-    <a href="#">
-      <div class="tool-card">
-        <h2>🎲 More Tools Coming</h2>
-        <p>Stay tuned! BroTools is growing fast.</p>
-      </div>
-    </a>
-
+    <div class="tool-card">
+      <h2>🛡 Terms & Privacy</h2>
+      <a href="privacy-policy.html"><button>Privacy Policy</button></a>
+      <br/><br/>
+      <a href="terms.html"><button>Terms of Use</button></a>
+    </div>
   </div>
 
   <footer>
-  <p>
-    <a href="index.html">Home</a> | 
-    <a href="about.html">About</a> | 
-    <a href="privacy-policy.html">Privacy Policy</a> | 
-    <a href="terms.html">Terms</a>
-  </p>
-  <p style="color: #555;">&copy; 2025 BroTools. All rights reserved.</p>
-</footer>
-
-    &copy; 2025 BroTools. Built with ❤ for the internet.
+    <p>Made with ❤ by Me • <a href="about.html">About</a></p>
   </footer>
 
 </body>
